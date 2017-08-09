@@ -44,6 +44,11 @@ public class HomeController
     @PostMapping("/songform")
     public String loadFromPage(@Valid @ModelAttribute("song") Song song, BindingResult bindingResult)
     {
+        if(bindingResult.hasErrors())
+        {
+            return "songform";
+        }
+
         return "confirmsong";
     }
 

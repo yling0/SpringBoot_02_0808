@@ -1,20 +1,23 @@
 package me.yling.helloworldproject.models;
 
+import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 public class Song
 {
-    @NotNull
+
     private long id;
+
     @NotNull
+    @Min(2)
     private String name;
-    @NotNull
+
     private String artist;
-    @NotNull
+
     private String album;
-    @NotNull
+
     private int rating;
-    @NotNull
+
     private int year;
 
 

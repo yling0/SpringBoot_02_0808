@@ -41,11 +41,11 @@
         <h3><p th:text="${myvar}"></p></h3>
         <h3><p th:text="#{static.message}"></p></h3>
         <h4><form action="#" th:action="@{/songform}" th:object="${song}" method="post">
-            Name: <input type="text" th:field="${name}" />
-            Artist: <input type="text" th:field="${artist}" />
-            Album: <input type="text" th:field="${album}" />
-            Rating: <input type="text" th:field="${rating}" />
-            Year: <input type="text" th:field="${year}" />
+            Name: <input type="text" th:field="*{name}" />
+            Artist: <input type="text" th:field="*{artist}" />
+            Album: <input type="text" th:field="*{album}" />
+            Rating: <input type="text" th:field="*{rating}" />
+            Year: <input type="text" th:field="*{year}" />
             <input type="submit" value="Submit" />
         </form></h4>
         <br>
